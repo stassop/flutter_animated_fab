@@ -1,4 +1,4 @@
-# Flutter Animated Floating Action Button
+# Animated Floating Action Button
 
 This article will help you build a `FloatingActionButton` that changes its properties using animations.
 
@@ -96,7 +96,7 @@ class FABTransition extends AnimatedWidget {
 }
 ```
 
-Note that is uses the `clamp()` method to limit opacity to the expected values in order to avoid an error.
+Note that it uses the `clamp()` method to limit opacity to the expected values in order to avoid an error.
 
 And that's all there is to it!
 
