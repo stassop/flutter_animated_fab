@@ -5,40 +5,44 @@ void main() {
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({Key? key}) : super(key: key);
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  bool isDarkMode = false;
+
+  void toggleDarkMode() {
+    setState(() {
+      isDarkMode = !isDarkMode;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Animated FAB',
-      theme: ThemeData(primarySwatch: Colors.blue),
-      home: const MyHomePage(),
+      theme: isDarkMode ? ThemeData.dark() : ThemeData.light(),
+      home: MyHomePage(
+        isDarkMode: isDarkMode,
+        toggleDarkMode: toggleDarkMode,
+      ),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
+class MyHomePage extends StatelessWidget {
   const MyHomePage({
     Key? key,
+    required this.isDarkMode,
+    required this.toggleDarkMode,
   }) : super(key: key);
 
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _updateCounter() {
-    setState(() {
-      if (_counter <= 0) {
-        _counter++;
-      } else {
-        _counter--;
-      }
-    });
-  }
+  final bool isDarkMode;
+  final Function() toggleDarkMode;
 
   @override
   Widget build(BuildContext context) {
@@ -47,23 +51,15 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text('Animated FAB'),
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'Counter value:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
-          ],
+        child: Text(
+          isDarkMode ? 'Dark mode' : 'Light mode',
         ),
       ),
       floatingActionButton: AnimatedFAB(
-        onPressed: _updateCounter,
-        backgroundColor: _counter <= 0 ? Colors.blue : Colors.red,
-        child: _counter <= 0 ? const Icon(Icons.add) : const Icon(Icons.remove),
+        onPressed: toggleDarkMode,
+        foregroundColor: isDarkMode ? Colors.black : Colors.white,
+        backgroundColor: isDarkMode ? Colors.white : Colors.black,
+        child: isDarkMode ? const Icon(Icons.light_mode) : const Icon(Icons.dark_mode),
       ),
     );
   }
