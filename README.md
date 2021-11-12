@@ -65,7 +65,7 @@ void didUpdateWidget(AnimatedFAB oldWidget) {
 }
 ```
 
-`AnimatedFAB` wraps a `FloatingActionButton` in a `FABTransition`, that handles the transitions using an `AnimationController` it receives as a property. `FABTransition` extends `AnimatedWidget`, which can run multiple animations using the same controller:
+`AnimatedFAB` wraps a `FloatingActionButton` in a `FABTransition`, that handles the transition using an `AnimationController` it receives as a property. `FABTransition` extends `AnimatedWidget`, which can run multiple animations using the same controller:
 
 ```
 class FABTransition extends AnimatedWidget {
