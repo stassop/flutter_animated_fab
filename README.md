@@ -4,6 +4,8 @@ This article will help you build a `FloatingActionButton` that changes its prope
 
 ![Flutter Hero Page Route](flutter_animated_fab.gif)
 
+It looks much better live, I promise.
+
 ## Getting Started
 
 To run the project open the iPhone simulator and run `flutter run`.
