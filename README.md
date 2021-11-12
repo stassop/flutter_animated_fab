@@ -96,7 +96,7 @@ class FABTransition extends AnimatedWidget {
 }
 ```
 
-Note that it uses the `clamp()` method to limit opacity to the expected values in order to avoid an error.
+Note that it calls the `clamp()` method on opacity because otherwise out-of-bounds values will cause an error when using `Curves.easeInBack`.
 
 And that's all there is to it!
 
