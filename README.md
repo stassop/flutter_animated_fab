@@ -98,6 +98,8 @@ class FABTransition extends AnimatedWidget {
 
 Note that is uses the `clamp()` method to limit opacity to the expected values in order to avoid an error.
 
+And that's all there is to it!
+
 ## Conclusion
 
-There are [multiple ways](https://flutter.dev/docs/development/ui/animations/tutorial) to animate widgets in Flutter. It's often simpler than it seems. 
+There are [multiple ways](https://flutter.dev/docs/development/ui/animations/tutorial) to animate widgets in Flutter. A little research will help you to quickly identify the perfect method for what you're trying to achieve. 
