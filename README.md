@@ -102,4 +102,4 @@ And that's all there is to it!
 
 ## Conclusion
 
-There are [multiple ways](https://flutter.dev/docs/development/ui/animations/tutorial) to animate widgets in Flutter. A little research will help you to quickly identify the perfect method for what you're trying to achieve. 
+There are [multiple ways](https://flutter.dev/docs/development/ui/animations/tutorial) to animate widgets in Flutter. A little research will help you to quickly identify the perfect method for what you're trying to achieve.
