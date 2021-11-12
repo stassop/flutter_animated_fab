@@ -38,7 +38,7 @@ Widget build(BuildContext context) {
 }
 ```
 
-Under the hood, `AnimatedFAB` saves the initial properties in the state, and watches for changes by overriding the `didUpdateWidget` method. When any of the properties change, it starts the animation, waits for it to finish, then reverses it and updates the state. This makes the button briefly disappear and pop up again with updated properties:
+Under the hood, `AnimatedFAB` saves the initial properties in the state, and watches for changes by overriding the `didUpdateWidget` method. When any of the properties change, it starts the animation, waits for it to finish, then reverses it, and updates the state. This makes the button briefly disappear and pop up again with updated properties:
 
 ```
 @override
