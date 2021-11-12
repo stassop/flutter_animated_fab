@@ -102,4 +102,4 @@ And that's all there is to it!
 
 ## Conclusion
 
-There are [multiple ways](https://flutter.dev/docs/development/ui/animations/tutorial) to animate widgets in Flutter. A little research will help you to quickly identify the perfect method for the effect you're trying to achieve.
+Animations can add value to your app by greatly enhancing the user experience. There are [multiple ways](https://flutter.dev/docs/development/ui/animations/tutorial) to animate widgets in Flutter. A little research will help you to quickly identify the perfect method for the effect you're trying to achieve.
